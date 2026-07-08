@@ -1,16 +1,106 @@
-# React + Vite
+# React Intro
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+My first React project built while learning the fundamentals of React.
 
-Currently, two official plugins are available:
+This project demonstrates the basics of:
+- React Components
+- JSX
+- Props
+- Component Reusability
+- Responsive Layout
+- Basic Styling with CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Responsive navigation bar
+- Hero section
+- About section
+- Team member cards
+- Product cards
+- Service cards
+- Footer
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the Oxlint configuration
+- React
+- Vite
+- JavaScript (ES6)
+- CSS
+- HTML
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Project Structure
+
+```
+src/
+│
+├── assets/
+│   └── Khushiprofile.png
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── TeamMember.jsx
+│   ├── ProductCard.jsx
+│   ├── ServiceCard.jsx
+│   └── Footer.jsx
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+
+## Learning Objectives
+
+This project was created as part of my Frontend Development Internship.
+
+Topics covered:
+- What is React
+- React Setup
+- JSX
+- Components
+- Reusable Components
+- Props
+
+## Run Locally
+
+Clone the project
+
+```bash
+git clone https://github.com/khuwu/react-intro.git
+```
+
+Go to the project folder
+
+```bash
+cd react-intro
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+## Future Improvements
+
+- Add React Router
+- Add state management
+- Add dark/light mode
+- Connect buttons to real pages
+- Improve animations
+- Deploy to GitHub Pages
+
+## Author
+
+**Khushi Thami**
+
+Computer Science Student
+
+Frontend Developer | Media Designer | Content Creator
