@@ -8,8 +8,68 @@ import ProductCard from "./components/ProductCard";
 import ServiceCard from "./components/ServiceCard";
 import Footer from "./components/Footer";
 
+import Counter from "./components/Counter";
+import Toggle from "./components/Toggle";
+import DynamicForm from "./components/DynamicForm";
+
 function App() {
+
+const products = [
+  {
+    emoji: "💻",
+    name: "Gaming Laptop",
+    price: "$899",
+  },
+  {
+    emoji: "🖱️",
+    name: "Gaming Mouse",
+    price: "$399",
+  },
+  {
+    emoji: "⌨️",
+    name: "Mechanical Keyboard",
+    price: "$499",
+  },
+];
+
+const teamMembers = [
+  {
+    emoji: "👩",
+    name: "Khushi Thami",
+    role: "Frontend Developer",
+  },
+  {
+    emoji: "👨",
+    name: "John Doe",
+    role: "Backend Developer",
+  },
+  {
+    emoji: "👩‍💻",
+    name: "Sarah Smith",
+    role: "UI Designer",
+  },
+];
+
+const services = [
+  {
+    emoji: "🎨",
+    title: "Graphic Design",
+    description: "Creative designs for social media and branding.",
+  },
+  {
+    emoji: "🌐",
+    title: "Website Design",
+    description: "Modern responsive websites for businesses.",
+  },
+  {
+    emoji: "📱",
+    title: "Content Creation",
+    description: "Creative social media content that gets attention.",
+  },
+];
+
   return (
+
     <div>
 
       <Navbar />
@@ -30,23 +90,14 @@ function App() {
 
     <div className="team-container">
 
-        <TeamMember
-            emoji="👩"
-            name="Khushi Thami"
-            role="Frontend Developer"
-        />
-
-        <TeamMember
-            emoji="👨"
-            name="Shayne Topp"
-            role="Backend Developer"
-        />
-
-        <TeamMember
-            emoji="👩‍💻"
-            name="Courtney Miller"
-            role="UI Designer"
-        />
+        {teamMembers.map((member) => (
+          <TeamMember
+            key={member.name}
+            emoji={member.emoji}
+            name={member.name}
+            role={member.role}
+          />
+        ))}
 
     </div>
 
@@ -60,23 +111,14 @@ function App() {
 
         <div className="product-container">
 
-          <ProductCard
-            emoji="💻"
-            name="Gaming Laptop"
-            price="$899"
-          />
-
-          <ProductCard
-            emoji="🖱️"
-            name="Gaming Mouse"
-            price="$399"
-          />
-
-          <ProductCard
-            emoji="⌨️"
-            name="Mechanical Keyboard"
-            price="$499"
-          />
+          {products.map((product) => (
+            <ProductCard
+              key={product.name}
+              emoji={product.emoji}
+              name={product.name}
+              price={product.price}
+            />
+        ))}
 
         </div>
 
@@ -90,31 +132,35 @@ function App() {
 
         <div className="service-container">
 
-          <ServiceCard
-            emoji="🎨"
-            title="Graphic Design"
-            description="Creative designs for social media and branding."
-          />
-
-          <ServiceCard
-            emoji="🌐"
-            title="Website Design"
-            description="Modern responsive websites for businesses."
-          />
-
-          <ServiceCard
-            emoji="📱"
-            title="Content Creation"
-            description="Creative social media content that gets attention."
-          />
+          {services.map((service) => (
+            <ServiceCard
+              key={service.title}
+              emoji={service.emoji}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
 
         </div>
+
+      </section>
+
+      <section className="week7">
+        <h1>Week 7: State Management</h1>
+
+        <Counter />
+
+        <Toggle />
+
+        <DynamicForm />
 
       </section>
 
       <Footer />
 
     </div>
+
+    
   );
 }
 
