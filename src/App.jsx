@@ -12,6 +12,8 @@ import Counter from "./components/Counter";
 import Toggle from "./components/Toggle";
 import DynamicForm from "./components/DynamicForm";
 
+import RestaurantMenu from "./restaurant/RestaurantMenu";
+
 function App() {
 
 const products = [
@@ -155,6 +157,8 @@ const services = [
         <DynamicForm />
 
       </section>
+
+      <RestaurantMenu />
 
       <Footer />
 
