@@ -14,6 +14,8 @@ import DynamicForm from "./components/DynamicForm";
 
 import RestaurantMenu from "./restaurant/RestaurantMenu";
 
+import UserList from "./api/UserList";
+
 function App() {
 
 const products = [
@@ -159,6 +161,8 @@ const services = [
       </section>
 
       <RestaurantMenu />
+
+      <UserList />
 
       <Footer />
 

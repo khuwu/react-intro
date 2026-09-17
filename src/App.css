@@ -692,3 +692,60 @@ button:hover{
     padding: 40px 15px;
   }
 }
+
+/* ===========================
+   User Listing App
+=========================== */
+
+.user-list{
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.user-list h1 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.user-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.user-card{
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    color: #222;
+}
+
+.user-card h3{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.user-card p {
+    margin: 10px 0;
+    color: #444;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .user-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .user-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .user-list {
+        padding: 40px 15px;
+    }
+}
