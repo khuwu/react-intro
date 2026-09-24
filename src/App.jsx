@@ -16,6 +16,9 @@ import RestaurantMenu from "./restaurant/RestaurantMenu";
 
 import UserList from "./api/UserList";
 
+import NewsApp from "./news/NewsApp";
+import ProductList from "./products/ProductList";
+
 function App() {
 
 const products = [
@@ -163,6 +166,9 @@ const services = [
       <RestaurantMenu />
 
       <UserList />
+
+      <NewsApp />
+      <ProductList />
 
       <Footer />
 
