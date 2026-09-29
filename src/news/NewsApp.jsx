@@ -29,6 +29,12 @@ function NewsApp() {
 
       {loading && <p>Loading news...</p>}
 
+      {!loading && !error && articles.length === 0 && (
+        <p className="empty-message">No news articles available.</p>
+      )}
+
+      {!loading && !error && (
+
       <div className="news-grid">
         {articles.map((article) => (
           <article className="news-card" key={article.id}>
@@ -42,6 +48,8 @@ function NewsApp() {
           </article>
         ))}
       </div>
+      )}
+
     </section>
   );
 }

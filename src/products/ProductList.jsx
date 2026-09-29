@@ -4,15 +4,18 @@ import axios from "axios";
 function ProductList() {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
+  const [loading, setLoading] =useState(true);
 
   useEffect(() => {
     axios
-        .get("https://fakestoreapi.com/products")
+        .get("https://dummyjson.com/products")
         .then((response) => {
-            setProducts(response.data);
+            setProducts(response.data.products);
+            setLoading(false);
         })
         .catch((error) => {
             setError("Failed to load products.");
+            setLoading(false);
         });
   }, []);
 
@@ -22,10 +25,18 @@ function ProductList() {
 
       {error && <p className="error-message">{error}</p>}
 
+      {!loading && !error && products.length === 0 && (
+        <p className="empty-message">No products available.</p>
+      )}
+
+      {loading && <p>Loading products...</p>}
+
+      {!loading && !error &&(
+
       <div className="product-grid">
         {products.map((product) => (
           <div className="product-card" key={product.id}>
-            <img src={product.image} alt={product.title} />
+            <img src={product.thumbnail} alt={product.title} />
 
             <h3>{product.title}</h3>
 
@@ -35,6 +46,7 @@ function ProductList() {
           </div>
         ))}
       </div>
+      )}
     </section>
   );
 }

@@ -897,3 +897,26 @@ button:hover{
     padding: 40px 15px;
   }
 }
+
+.error-message,
+.empty-message {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  color: #555;
+}
+
+.error-message {
+  color: #c0392b;
+}
+
+.empty-message {
+  color: #777;
+}
+
+.news-app > p,
+.product-list > p {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
