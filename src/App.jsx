@@ -19,6 +19,8 @@ import UserList from "./api/UserList";
 import NewsApp from "./news/NewsApp";
 import ProductList from "./products/ProductList";
 
+import BlogApp from "./blog/BlogApp";
+
 function App() {
 
 const products = [
@@ -169,6 +171,8 @@ const services = [
 
       <NewsApp />
       <ProductList />
+
+      <BlogApp />
 
       <Footer />
 

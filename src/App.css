@@ -920,3 +920,111 @@ button:hover{
   padding: 20px;
   font-size: 16px;
 }
+
+/* ===========================
+   Blog Posts Styling
+=========================== */
+
+.blog-app {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-app h1{
+  text-align: center;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.blog-card{
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+}
+
+.blog-card h3{
+  color: #222;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.blog-card p{
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+@media (max-width: 600px){
+  .blog-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+  .blog-app {
+    padding: 40px 15px;
+  }
+}
+
+/* ====================================
+SELECTED POST 
+=======================================*/
+
+.selected-post {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  color: #222;
+}
+
+.selected-post h2 {
+  margin: 20px 0 15px;
+  color: #222;
+  text-transform: capitalize;
+}
+
+.selected-post p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.selected-post button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.selected-post button:hover {
+  opacity: 0.8;
+}
+
+.blog-card button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.blog-card button:hover {
+  opacity: 0.8;
+}
