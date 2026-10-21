@@ -10,6 +10,8 @@ import AboutPage from "./pages/About";
 
 import RegistrationForm from "./components/RegistrationForm";
 
+import NotesApp from "./components/NotesApp";
+
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +24,7 @@ function App() {
           path="/register"
           element={<RegistrationForm />}
         />
+        <Route path="/notes" element={<NotesApp />} />
       </Routes>
     </BrowserRouter>
   );
