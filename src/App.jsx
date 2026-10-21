@@ -12,6 +12,8 @@ import RegistrationForm from "./components/RegistrationForm";
 
 import NotesApp from "./components/NotesApp";
 
+import Dashboard from "./components/Dashboard";
+
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +27,9 @@ function App() {
           element={<RegistrationForm />}
         />
         <Route path="/notes" element={<NotesApp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+
+
       </Routes>
     </BrowserRouter>
   );
