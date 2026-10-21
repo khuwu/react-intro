@@ -8,7 +8,7 @@ function Hero() {
 
         <h3>Hi, I am</h3>
 
-        <h1>Testing My Feature Branch!</h1>
+        <h1>Welcome to my Updated Portfolio!</h1>
 
         <h2>Frontend Developer | Media Designer | Content Creator</h2>
 
