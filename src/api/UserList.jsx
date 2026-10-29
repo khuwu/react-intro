@@ -1,4 +1,6 @@
+
 import { useEffect, useState } from "react";
+import { getUsers } from "./userService";
 
 function UserList() {
   const [users, setUsers] = useState([]);
@@ -6,22 +8,18 @@ function UserList() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Failed to fetch users");
-      }
-
-      return response.json();
-    })
-    .then((data) => {
+  async function fetchUsers() {
+    try {
+      const data = await getUsers();
       setUsers(data);
-      setLoading(false);
-    })
-    .catch((error) => {
+    } catch (error) {
       setError(error.message);
+    } finally {
       setLoading(false);
-    });
+    }
+  }
+
+  fetchUsers();
 }, []);
 
   return (
@@ -29,8 +27,6 @@ function UserList() {
       <h1>User Listing</h1>
 
       {loading && <p>Loading users...</p>}
-      
-      {error && <p className="error-message">{error}</p>}
 
       {error && <p className="error-message">{error}</p>}
 

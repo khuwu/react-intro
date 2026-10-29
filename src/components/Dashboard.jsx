@@ -1,3 +1,5 @@
+import UserList from "../api/UserList";
+
 import {useNavigate} from "react-router-dom";
 
 function Dashboard() {
@@ -79,6 +81,8 @@ function Dashboard() {
         <button>Manage Users</button>
 
       </section>
+
+      <UserList />
 
     </div>
   );
