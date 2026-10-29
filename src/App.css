@@ -965,12 +965,12 @@ button:hover{
   .blog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
 
-@media (max-width: 600px){
-  .blog-grid{
+@media (max-width: 600px) {
+  .blog-grid {
     grid-template-columns: 1fr;
   }
-}
 
   .blog-app {
     padding: 40px 15px;
@@ -1283,4 +1283,53 @@ Admin Dashboard
   .dashboard {
     padding: 15px;
   }
+}
+
+/* ==================================
+RESUEABLE BUTTON COMPONENT
+================================== */
+
+.custom-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.custom-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+}
+
+
+/* ============================
+Mobile Navbar 
+==================================*/
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+  .home-section-title {
+  text-align: center;
+  width: 100%;
+  margin: 40px 0 25px;
 }

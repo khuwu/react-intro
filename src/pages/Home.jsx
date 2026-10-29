@@ -11,7 +11,7 @@ function Home() {
       <Hero />
       <About />
 
-      <h2>Meet Our Team</h2>
+      <h2 className="home-section-title">Meet Our Team</h2>
       <div className="team-container">
         <TeamMember
           emoji="👩‍💻"
@@ -25,7 +25,7 @@ function Home() {
         />
       </div>
 
-      <h2>Our Products</h2>
+      <h2 className="home-section-title">Our Products</h2>
       <div className="product-container" id="products">
         <InfoCard
           emoji="💻"
@@ -43,7 +43,7 @@ function Home() {
         />
       </div>
 
-      <h2>Our Services</h2>
+      <h2 className="home-section-title">Our Services</h2>
       <div className="service-container" id="services">
         <InfoCard
           emoji="🌐"

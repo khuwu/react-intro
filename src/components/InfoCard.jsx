@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 function InfoCard({ emoji, title, description, buttonText, className }) {
   return (
     <div className={className}>
@@ -8,7 +10,7 @@ function InfoCard({ emoji, title, description, buttonText, className }) {
       <h2>{title}</h2>
       <p>{description}</p>
 
-      <button>{buttonText}</button>
+      <Button>{buttonText}</Button>
     </div>
   );
 }
