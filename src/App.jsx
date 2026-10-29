@@ -1,18 +1,13 @@
-
 import "./App.css";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-
 import Home from "./pages/Home";
 import AboutPage from "./pages/About";
-
 import RegistrationForm from "./components/RegistrationForm";
-
 import NotesApp from "./components/NotesApp";
-
 import Dashboard from "./components/Dashboard";
+import BootstrapPractice from "./components/BootstrapPractice";
 
 function App() {
   return (
@@ -22,14 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route
-          path="/register"
-          element={<RegistrationForm />}
-        />
+        <Route path="/register" element={<RegistrationForm />} />
         <Route path="/notes" element={<NotesApp />} />
         <Route path="/dashboard" element={<Dashboard />} />
-
-
+        <Route path="/bootstrap" element={<BootstrapPractice />} />
       </Routes>
     </BrowserRouter>
   );
