@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import menuData from "./menuData";
 import MenuCard from "../components/MenuCard";
 import CategoryFilter from "../components/CategoryFilter";
 import SearchBar from "../components/SearchBar";
+import { formToJSON } from "axios";
 
 function RestaurantMenu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const categories = [
+  const categories = useMemo(() => {
+  return [
     "All",
     ...new Set(menuData.map((item) => item.category))
   ];
+}, []);
 
-  const filteredMenu = menuData.filter((item) => {
+  const filteredMenu = useMemo(() => {
+  return menuData.filter((item) => {
     const matchesCategory =
       selectedCategory === "All" ||
       item.category === selectedCategory;
@@ -24,6 +28,7 @@ function RestaurantMenu() {
 
     return matchesCategory && matchesSearch;
   });
+}, [selectedCategory, searchTerm]);
 
   return (
     <section className="restaurant-menu">

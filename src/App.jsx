@@ -1,6 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import RestaurantMenu from "./restaurant/RestaurantMenu";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutPage from "./pages/About";
@@ -21,6 +23,9 @@ function App() {
         <Route path="/notes" element={<NotesApp />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/bootstrap" element={<BootstrapPractice />} />
+
+        <Route path="/menu" element={<RestaurantMenu />} />
+        
       </Routes>
     </BrowserRouter>
   );
