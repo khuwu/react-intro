@@ -2,8 +2,7 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
 import TeamMember from "../components/TeamMember";
-import ProductCard from "../components/ProductCard";
-import ServiceCard from "../components/ServiceCard";
+import InfoCard from "../components/InfoCard";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -28,29 +27,37 @@ function Home() {
 
       <h2>Our Products</h2>
       <div className="product-container" id="products">
-        <ProductCard
+        <InfoCard
           emoji="💻"
-          name="Laptop"
-          price="Rs. 85,000"
+          title="Laptop"
+          description="Rs. 85,000"
+          buttonText="Buy Now"
+          className="product-card"
         />
-        <ProductCard
+        <InfoCard
           emoji="🎧"
-          name="Headphones"
-          price="Rs. 3,500"
+          title="Headphones"
+          description="Rs. 3,500"
+          buttonText="Buy Now"
+          className="product-card"
         />
       </div>
 
       <h2>Our Services</h2>
       <div className="service-container" id="services">
-        <ServiceCard
+        <InfoCard
           emoji="🌐"
           title="Web Development"
           description="Building responsive websites."
+          buttonText="Learn More"
+          className="service-card"
         />
-        <ServiceCard
+        <InfoCard
           emoji="🎨"
           title="UI Design"
           description="Creating beautiful user interfaces."
+          buttonText="Learn More"
+          className="service-card"
         />
       </div>
 

@@ -7,7 +7,7 @@ import AboutPage from "./pages/About";
 import RegistrationForm from "./components/RegistrationForm";
 import NotesApp from "./components/NotesApp";
 import Dashboard from "./components/Dashboard";
-import BootstrapPractice from "./components/BootstrapPractice";
+import BootstrapPractice from "./pages/BootstrapPractice";
 
 function App() {
   return (
